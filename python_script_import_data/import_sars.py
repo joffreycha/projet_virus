@@ -28,7 +28,7 @@ def generate_data(nom_fichier):
         # TODO : créer le dictionnaire JSON pour une ligne du fichier
         for row in spamreader:
             # On récupère chaque ligne sous la forme d'une liste
-            year, week, region, new_cases = row
+            date, country, cumul_nb_cases, deaths, recovored = row
             
             # On précise le schéma de l'objet json (dictionnaire python) à envoyer avec l'api bulk:
             # il est de la forme : 
@@ -37,18 +37,19 @@ def generate_data(nom_fichier):
             #   "_source" : [objet_json]
             # }
             yield {
-                "_index": "mers",
+                "_index": "sars",
                 "_type": "doc",
                 # Si json : juste "_source": json_object
                 "_source": {
-                    "year": year,
-                    "week": week,
-                    "region": region,
-                    "new_cases": new_cases
+                    "date": datetime.strptime(date, "%Y-%m-%d"),
+                    "country": country,
+                    "cumul_nb_cases": cumul_nb_cases,
+                    "deaths": deaths,
+                    "recovored": recovored
                 }
             }
         
 mydb = client["epidemics"]
-mycol = mydb["mers"]
+mycol = mydb["sars"]
 
-mycol.insert_many(generate_data(r'..\data\MERS\mers_world_2012_2019_weekly_who.csv'))
+mycol.insert_many(generate_data(r'..\data\SARS\sars_2003_cases_deaths_recov_by_day&country_who.csv'))
