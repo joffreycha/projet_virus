@@ -110,7 +110,7 @@ def listdirectory(path):
             fichier.append(os.path.join(root, i)) 
     return fichier
 
-liste_fichier = listdirectory('.\\data\\Influenza\\')
+liste_fichier = listdirectory(r'..\data\Influenza')
 
 mydb = client["epidemics"]
 mycol = mydb["influenza"]
