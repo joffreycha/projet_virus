@@ -75,4 +75,4 @@ def generate_data(nom_fichier):
 mydb = client["epidemics"]
 mycol = mydb["workforce"]
 
-mycol.insert_many(generate_data(r'C:\Workspaces\projet_virus\data\health_indicators\HealthWorkForce.csv'))
+mycol.insert_many(generate_data(r'..\data\health_indicators\HealthWorkForce.csv'))
