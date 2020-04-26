@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class InfluenzaMongo {
 	
-	// @Id
+	@Id
 	private String country;
 	private String who_region;
 	private String region;
