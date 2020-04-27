@@ -63,10 +63,26 @@ def generate_data(nom_fichier):
                 "_type": "doc",
                 # Si json : juste "_source": json_object
                 "_source": {
+                    "GHO_code": GHO_code,
+                    "hospital_beds": hospital_beds,
+                    "GHO_url": GHO_url,
+                    "publishState_code": publishState_code,
+                    "publishState": publishState,
+                    "publishState_url": publishState_url,
+                    "year_code": year_code,
                     "year": year,
+                    "region_code": region_code,
                     "region": region,
+                    "region_url": region_url,
+                    "country_code": country_code,
                     "country": country,
+                    "country_url": country_url,
                     "nb": int(nb),
+                    "nb_numeric": nb_numeric,
+                    "low": low,
+                    "high": high,
+                    "StdErr": StdErr,
+                    "StdDev": StdDev,
                     "comments": comments
                 }
             }

@@ -67,11 +67,28 @@ def generate_data(nom_fichier):
                 "_source": {
                     "GHO_code": GHO_code,
                     "sanitation_hygiene": sanitation_hygiene,
+                    "GHO_url": GHO_url,
+                    "publishState_code": publishState_code,
+                    "publishState": publishState,
+                    "publishState_url": publishState_url,
+                    "year_code": year_code,
                     "year": year,
+                    "year_url": year_url,
+                    "region_code": region_code,
                     "region": region,
+                    "region_url": region_url,
+                    "country_code": country_code,
                     "country": country,
+                    "country_url": country_url,
+                    "residence_area_type_code": residence_area_type_code,
                     "residence_area_type": residence_area_type,
+                    "residence_area_type_url": residence_area_type_url,
                     "nb": int(nb),
+                    "nb_numeric": float(nb_numeric),
+                    "low": low,
+                    "high": high,
+                    "StdErr": StdErr,
+                    "StdDev": StdDev,
                     "comments": comments
                 }
             }
