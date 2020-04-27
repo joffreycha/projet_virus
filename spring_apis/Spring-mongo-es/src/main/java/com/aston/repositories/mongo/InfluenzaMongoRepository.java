@@ -4,6 +4,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.aston.models.mongo.InfluenzaMongo;
 
-public interface InfluenzaRepository extends MongoRepository<InfluenzaMongo, String> {
+public interface InfluenzaMongoRepository extends MongoRepository<InfluenzaMongo, String> {
 
 }

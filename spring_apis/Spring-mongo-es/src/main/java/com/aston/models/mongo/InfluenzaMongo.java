@@ -15,16 +15,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class InfluenzaMongo {
 	
-	@Id
+	@Id private String id;
+	
 	private String country;
 	private String who_region;
 	private String region;
+	
 	private int year;
 	private int week;
 	private LocalDate dateds;
 	private LocalDate datefs;
+	
 	private String collected;
 	private String processed;
+	
 	private int type_A_H1;
 	private int type_A_H1N1;
     private int type_A_H3;
@@ -37,5 +41,6 @@ public class InfluenzaMongo {
     private int type_B_total;
     private int total_positives;
     private int total_negatives;
+    
     private String ILI;
 }
