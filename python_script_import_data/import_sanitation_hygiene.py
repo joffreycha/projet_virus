@@ -28,7 +28,7 @@ def generate_data(nom_fichier):
         # TODO : créer le dictionnaire JSON pour une ligne du fichier
         for row in spamreader:
             # On récupère chaque ligne sous la forme d'une liste
-            GHO_code, job, GHO_url, publishState_code, publishState, publishState_url, year_code, year, year_url, region_code, region, region_url, country_code, country, country_url, nb, nb_numeric, low, high, StdErr, StdDev, comments = row
+            GHO_code, sanitation_hygiene, GHO_url, publishState_code, publishState, publishState_url, year_code, year, year_url, region_code, region, region_url, country_code, country, country_url, residence_area_type_code, residence_area_type, residence_area_type_url, nb, nb_numeric, low, high, StdErr, StdDev, comments = row
             if not publishState_url :
                 publishState_url = 0
             if not year_url :
@@ -41,6 +41,8 @@ def generate_data(nom_fichier):
                 region_url = 0
             if not country_url :
                 country_url = 0
+            if not residence_area_type_url : 
+                residence_area_type_url = 'null'
             if not low :
                 low = 0
             if not high :
@@ -59,20 +61,22 @@ def generate_data(nom_fichier):
             #   "_source" : [objet_json]
             # }
             yield {
-                "_index": "workforce",
+                "_index": "sanitation_hygiene",
                 "_type": "doc",
                 # Si json : juste "_source": json_object
                 "_source": {
-                    "job": job,
+                    "GHO_code": GHO_code,
+                    "sanitation_hygiene": sanitation_hygiene,
                     "year": year,
                     "region": region,
                     "country": country,
-                    "nb": float(nb),
+                    "residence_area_type": residence_area_type,
+                    "nb": int(nb),
                     "comments": comments
                 }
             }
         
 mydb = client["epidemics"]
-mycol = mydb["workforce"]
+mycol = mydb["sanitation_hygiene"]
 
-mycol.insert_many(generate_data(r'..\data\health_indicators\HealthWorkForce.csv'))
+mycol.insert_many(generate_data(r'..\data\health_indicators\hygiene_sanitation.csv'))

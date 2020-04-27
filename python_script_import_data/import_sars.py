@@ -28,29 +28,7 @@ def generate_data(nom_fichier):
         # TODO : créer le dictionnaire JSON pour une ligne du fichier
         for row in spamreader:
             # On récupère chaque ligne sous la forme d'une liste
-            GHO_code, job, GHO_url, publishState_code, publishState, publishState_url, year_code, year, year_url, region_code, region, region_url, country_code, country, country_url, nb, nb_numeric, low, high, StdErr, StdDev, comments = row
-            if not publishState_url :
-                publishState_url = 0
-            if not year_url :
-                year_url = 0
-            if not region_code :
-                region_code = 'null'
-            if not region :
-                region = 'null'
-            if not region_url :
-                region_url = 0
-            if not country_url :
-                country_url = 0
-            if not low :
-                low = 0
-            if not high :
-                high = 0
-            if not StdErr :
-                StdErr = 0
-            if not StdDev :
-                StdDev = 0
-            if not comments :
-                comments = 'null'
+            date, country, cumul_nb_cases, deaths, recovored = row
             
             # On précise le schéma de l'objet json (dictionnaire python) à envoyer avec l'api bulk:
             # il est de la forme : 
@@ -59,20 +37,19 @@ def generate_data(nom_fichier):
             #   "_source" : [objet_json]
             # }
             yield {
-                "_index": "workforce",
+                "_index": "sars",
                 "_type": "doc",
                 # Si json : juste "_source": json_object
                 "_source": {
-                    "job": job,
-                    "year": year,
-                    "region": region,
+                    "date": datetime.strptime(date, "%Y-%m-%d"),
                     "country": country,
-                    "nb": float(nb),
-                    "comments": comments
+                    "cumul_nb_cases": cumul_nb_cases,
+                    "deaths": deaths,
+                    "recovored": recovored
                 }
             }
         
 mydb = client["epidemics"]
-mycol = mydb["workforce"]
+mycol = mydb["sars"]
 
-mycol.insert_many(generate_data(r'..\data\health_indicators\HealthWorkForce.csv'))
+mycol.insert_many(generate_data(r'..\data\SARS\sars_2003_cases_deaths_recov_by_day&country_who.csv'))

@@ -28,7 +28,7 @@ def generate_data(nom_fichier):
         # TODO : créer le dictionnaire JSON pour une ligne du fichier
         for row in spamreader:
             # On récupère chaque ligne sous la forme d'une liste
-            GHO_code, job, GHO_url, publishState_code, publishState, publishState_url, year_code, year, year_url, region_code, region, region_url, country_code, country, country_url, nb, nb_numeric, low, high, StdErr, StdDev, comments = row
+            GHO_code, current_health_expenditure, GHO_url, publishState_code, publishState, publishState_url, year_code, year, year_url, region_code, region, region_url, world_bank_income_group_code, world_bank_income_group, world_bank_income_group_url, country_code, country, country_url, nb, nb_numeric, low, high, StdErr, StdDev, comments = row
             if not publishState_url :
                 publishState_url = 0
             if not year_url :
@@ -39,6 +39,8 @@ def generate_data(nom_fichier):
                 region = 'null'
             if not region_url :
                 region_url = 0
+            if not world_bank_income_group_url:
+                world_bank_income_group_url = 0
             if not country_url :
                 country_url = 0
             if not low :
@@ -59,13 +61,15 @@ def generate_data(nom_fichier):
             #   "_source" : [objet_json]
             # }
             yield {
-                "_index": "workforce",
+                "_index": "current_health_expenditure",
                 "_type": "doc",
                 # Si json : juste "_source": json_object
                 "_source": {
-                    "job": job,
+                    "GHO_code": GHO_code,
+                    "current_health_expenditure": current_health_expenditure,
                     "year": year,
                     "region": region,
+                    "world_bank_income_group": world_bank_income_group,
                     "country": country,
                     "nb": float(nb),
                     "comments": comments
@@ -73,6 +77,6 @@ def generate_data(nom_fichier):
             }
         
 mydb = client["epidemics"]
-mycol = mydb["workforce"]
+mycol = mydb["current_health_expenditure"]
 
-mycol.insert_many(generate_data(r'..\data\health_indicators\HealthWorkForce.csv'))
+mycol.insert_many(generate_data(r'..\data\health_indicators\Indicateur_depense_dans_sante.csv'))

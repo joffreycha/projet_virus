@@ -28,7 +28,7 @@ def generate_data(nom_fichier):
         # TODO : créer le dictionnaire JSON pour une ligne du fichier
         for row in spamreader:
             # On récupère chaque ligne sous la forme d'une liste
-            GHO_code, job, GHO_url, publishState_code, publishState, publishState_url, year_code, year, year_url, region_code, region, region_url, country_code, country, country_url, nb, nb_numeric, low, high, StdErr, StdDev, comments = row
+            GHO_code, version, GHO_url, publishState_code, publishState, publishState_url, year_code, year, year_url, region_code, region, region_url, country_code, country, country_url, nb, nb_numeric, low, high, StdErr, StdDev, comments = row
             if not publishState_url :
                 publishState_url = 0
             if not year_url :
@@ -59,20 +59,21 @@ def generate_data(nom_fichier):
             #   "_source" : [objet_json]
             # }
             yield {
-                "_index": "workforce",
+                "_index": "indicator_health_preparation",
                 "_type": "doc",
                 # Si json : juste "_source": json_object
                 "_source": {
-                    "job": job,
+                    "GHO_code": GHO_code,
+                    "version": version,
                     "year": year,
                     "region": region,
                     "country": country,
-                    "nb": float(nb),
+                    "nb": nb,
                     "comments": comments
                 }
             }
         
 mydb = client["epidemics"]
-mycol = mydb["workforce"]
+mycol = mydb["indicator_health_preparation"]
 
-mycol.insert_many(generate_data(r'..\data\health_indicators\HealthWorkForce.csv'))
+mycol.insert_many(generate_data(r'..\data\health_indicators\Indicateur_international_health_prepa.csv'))
