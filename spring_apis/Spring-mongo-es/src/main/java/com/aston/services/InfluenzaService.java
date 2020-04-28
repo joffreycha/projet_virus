@@ -3,7 +3,7 @@ package com.aston.services;
 import java.util.List;
 
 import com.aston.models.elastic.InfluenzaES;
-import com.aston.models.mongo.InfluenzaMongo;
+import com.aston.models.mongo.Influenza;
 
 public interface InfluenzaService {
 
@@ -11,14 +11,14 @@ public interface InfluenzaService {
 	 * Récupère tous les enregistrements de Mongo
 	 * @return liste d'InfluenzaMongo
 	 */
-	public List<InfluenzaMongo> findAll();
+	public List<Influenza> findAll();
 	
 	/**
 	 * Récupère un enregistrement de Mongo à partir de son id
 	 * @param id l'id à rechercher
 	 * @return l'enregistrement trouvé
 	 */
-	public InfluenzaMongo findById(String id);
+	public Influenza findById(String id);
 	
 	
 	
@@ -27,5 +27,5 @@ public interface InfluenzaService {
 	 * @param inf
 	 * @return
 	 */
-	public InfluenzaES save(InfluenzaMongo inf);
+	public InfluenzaES save(Influenza inf);
 }

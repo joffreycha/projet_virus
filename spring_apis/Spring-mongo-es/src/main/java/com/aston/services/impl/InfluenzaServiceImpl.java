@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.aston.exceptions.NotFoundException;
 import com.aston.models.elastic.InfluenzaES;
-import com.aston.models.mongo.InfluenzaMongo;
+import com.aston.models.mongo.Influenza;
 import com.aston.repositories.elastic.InfluenzaESRepository;
 import com.aston.repositories.mongo.InfluenzaMongoRepository;
 import com.aston.services.InfluenzaService;
@@ -20,22 +20,22 @@ public class InfluenzaServiceImpl implements InfluenzaService {
 	@Autowired InfluenzaESRepository influenzaESRepository;
 
 	@Override
-	public List<InfluenzaMongo> findAll() {
+	public List<Influenza> findAll() {
 		return this.influenzaRepository.findAll();
 	}
 
 	@Override
-	public InfluenzaES save(InfluenzaMongo inf) {
+	public InfluenzaES save(Influenza inf) {
 		// Enregistre le doc avec les champs utiles à ElasticSearch
 		InfluenzaES infES = new InfluenzaES(inf);
 		return this.influenzaESRepository.save(infES);
 	}
 	
 	@Override
-	public InfluenzaMongo findById(String id) {
-		Optional<InfluenzaMongo> inf  = this.influenzaRepository.findById(id);
+	public Influenza findById(String id) {
+		Optional<Influenza> inf  = this.influenzaRepository.findById(id);
 		if (!inf.isPresent())
-			throw new NotFoundException(id, InfluenzaMongo.class.getSimpleName());
+			throw new NotFoundException(id, Influenza.class.getSimpleName());
 		
 		return inf.get();
 	}

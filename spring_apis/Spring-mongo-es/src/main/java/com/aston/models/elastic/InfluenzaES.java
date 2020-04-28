@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import com.aston.models.mongo.InfluenzaMongo;
+import com.aston.models.mongo.Influenza;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -42,7 +42,7 @@ public class InfluenzaES {
     
     private String ILI;
 
-	public InfluenzaES(InfluenzaMongo inf) {
+	public InfluenzaES(Influenza inf) {
 		this.id = inf.getId();
 		this.country = inf.getCountry();
 		this.who_region = inf.getWho_region();

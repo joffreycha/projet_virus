@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class InfluenzaMongo {
+public class Influenza {
 	
 	@Id private String id;
 	

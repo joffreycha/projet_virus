@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.aston.models.elastic.InfluenzaES;
-import com.aston.models.mongo.InfluenzaMongo;
+import com.aston.models.mongo.Influenza;
 import com.aston.services.InfluenzaService;
 
 @RestController
@@ -23,17 +23,17 @@ public class InfluenzaController {
 	@Autowired InfluenzaService influenzaService;
 	
 	@GetMapping("")
-	public List<InfluenzaMongo> findAll() {
+	public List<Influenza> findAll() {
 		return this.influenzaService.findAll();
 	}
 	
 	@PostMapping("")
-	public InfluenzaES save(@RequestBody InfluenzaMongo inf) {
+	public InfluenzaES save(@RequestBody Influenza inf) {
 		return this.influenzaService.save(inf);
 	}
 	
 	@GetMapping("{id}")
-	public InfluenzaMongo findById(@PathVariable String id) {
+	public Influenza findById(@PathVariable String id) {
 		return this.influenzaService.findById(id);
 	}
 }
