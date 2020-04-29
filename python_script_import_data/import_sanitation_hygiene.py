@@ -61,10 +61,6 @@ def generate_data(nom_fichier):
             #   "_source" : [objet_json]
             # }
             yield {
-                "_index": "sanitation_hygiene",
-                "_type": "doc",
-                # Si json : juste "_source": json_object
-                "_source": {
                     "GHO_code": GHO_code,
                     "sanitation_hygiene": sanitation_hygiene,
                     "GHO_url": GHO_url,
@@ -90,7 +86,6 @@ def generate_data(nom_fichier):
                     "StdErr": StdErr,
                     "StdDev": StdDev,
                     "comments": comments
-                }
             }
         
 mydb = client["epidemics"]
