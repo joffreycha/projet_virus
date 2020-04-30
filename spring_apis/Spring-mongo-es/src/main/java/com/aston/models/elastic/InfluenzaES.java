@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Document(indexName = "epidemics_influenza")
 @Data
 @NoArgsConstructor
-public class InfluenzaES {
+public class InfluenzaES{
 
 	@Id private String id;
 	

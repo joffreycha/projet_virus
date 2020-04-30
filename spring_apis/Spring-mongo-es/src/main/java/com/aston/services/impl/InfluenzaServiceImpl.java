@@ -1,5 +1,6 @@
 package com.aston.services.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,14 +22,25 @@ public class InfluenzaServiceImpl implements InfluenzaService {
 
 	@Override
 	public List<Influenza> findAll() {
-		return this.influenzaRepository.findAll();
-	}
-
-	@Override
-	public InfluenzaES save(Influenza inf) {
-		// Enregistre le doc avec les champs utiles à ElasticSearch
-		InfluenzaES infES = new InfluenzaES(inf);
-		return this.influenzaESRepository.save(infES);
+		List<Influenza> liste = this.influenzaRepository.findAll();
+		
+		List<InfluenzaES> listeES = new ArrayList<>();
+		int cpt = 1;
+		for(Influenza i : liste)
+		{
+			
+			InfluenzaES infES = new InfluenzaES(i);
+			listeES.add(infES);
+			cpt++;
+			if(cpt==10000)
+			{
+				this.influenzaESRepository.saveAll(listeES);
+				cpt=1;
+				listeES = new ArrayList<>();
+			}
+		}
+		this.influenzaESRepository.saveAll(listeES);
+		return liste;
 	}
 	
 	@Override
@@ -39,5 +51,6 @@ public class InfluenzaServiceImpl implements InfluenzaService {
 		
 		return inf.get();
 	}
+	
 
 }

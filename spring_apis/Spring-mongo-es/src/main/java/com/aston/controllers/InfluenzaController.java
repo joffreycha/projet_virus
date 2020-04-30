@@ -27,11 +27,6 @@ public class InfluenzaController {
 		return this.influenzaService.findAll();
 	}
 	
-	@PostMapping("")
-	public InfluenzaES save(@RequestBody Influenza inf) {
-		return this.influenzaService.save(inf);
-	}
-	
 	@GetMapping("{id}")
 	public Influenza findById(@PathVariable String id) {
 		return this.influenzaService.findById(id);

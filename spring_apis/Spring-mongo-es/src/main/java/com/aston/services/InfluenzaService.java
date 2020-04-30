@@ -19,13 +19,6 @@ public interface InfluenzaService {
 	 * @return l'enregistrement trouvé
 	 */
 	public Influenza findById(String id);
+
 	
-	
-	
-	/**
-	 * Convertit et sauvegarder l'objet Mongo en objet ElasticSearch 
-	 * @param inf
-	 * @return
-	 */
-	public InfluenzaES save(Influenza inf);
 }
