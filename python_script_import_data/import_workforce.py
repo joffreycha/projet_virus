@@ -52,17 +52,7 @@ def generate_data(nom_fichier):
             if not comments :
                 comments = 'null'
             
-            # On précise le schéma de l'objet json (dictionnaire python) à envoyer avec l'api bulk:
-            # il est de la forme : 
-            # {
-            #   "index" : [nom_de_l_index],
-            #   "_source" : [objet_json]
-            # }
             yield {
-                "_index": "workforce",
-                "_type": "doc",
-                # Si json : juste "_source": json_object
-                "_source": {
                     "GHO_code": GHO_code,
                     "job": job,
                     "GHO_url": GHO_url,
@@ -85,7 +75,6 @@ def generate_data(nom_fichier):
                     "StdErr": StdErr,
                     "StdDev": StdDev,
                     "comments": comments
-                }
             }
         
 mydb = client["epidemics"]

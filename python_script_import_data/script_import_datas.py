@@ -1,0 +1,11 @@
+import import_depenses
+import import_h1n1
+import import_hospital_beds
+import import_indicator_health_prepa
+import import_influenza
+import import_infrastructure
+import import_mers
+import import_sanitation_hygiene
+import import_sars
+import import_universal_health_coverage
+import import_workforce

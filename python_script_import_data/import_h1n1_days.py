@@ -34,15 +34,11 @@ def generate_data(nom_fichier):
             #   "_source" : [objet_json]
             # }
             yield {
-                "_index": "h1n1_days",
-                "_type": "doc",
-                # Si json : juste "_source": json_object
-                "_source": {
                     "country": country,
                     "cases": cases,
                     "deaths": int(deaths),
                     "update_time": datetime.strptime(update_time, "%m/%d/%Y %H:%M")
-                }
+
             }
         
 mydb = client["epidemics"]

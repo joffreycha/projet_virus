@@ -59,10 +59,6 @@ def generate_data(nom_fichier):
             #   "_source" : [objet_json]
             # }
             yield {
-                "_index": "indicator_health_preparation",
-                "_type": "doc",
-                # Si json : juste "_source": json_object
-                "_source": {
                     "GHO_code": GHO_code,
                     "version": version,
                     "GHO_url": GHO_url,
@@ -85,10 +81,9 @@ def generate_data(nom_fichier):
                     "StdErr": StdErr,
                     "StdDev": StdDev,                    
                     "comments": comments
-                }
             }
         
 mydb = client["epidemics"]
 mycol = mydb["indicator_health_preparation"]
 
-mycol.insert_many(generate_data(r'..\data\health_indicators\Indicateur_international_health_prepa.csv'))
+mycol.insert_many(generate_data(r'..\\data\\health_indicators\\Indicateur_international_health_prepa.csv'))
