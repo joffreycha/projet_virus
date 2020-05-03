@@ -28,7 +28,7 @@ def generate_data(nom_fichier):
         # TODO : créer le dictionnaire JSON pour une ligne du fichier
         for row in spamreader:
             # On récupère chaque ligne sous la forme d'une liste
-            date, country, cumul_nb_cases, deaths, recovored = row
+            date, country, cumul_nb_cases, deaths, recovered = row
             
             # On précise le schéma de l'objet json (dictionnaire python) à envoyer avec l'api bulk:
             # il est de la forme : 
@@ -41,7 +41,7 @@ def generate_data(nom_fichier):
                     "country": country,
                     "cumul_nb_cases": cumul_nb_cases,
                     "deaths": deaths,
-                    "recovored": recovored
+                    "recovered": recovered
             }
         
 mydb = client["epidemics"]
