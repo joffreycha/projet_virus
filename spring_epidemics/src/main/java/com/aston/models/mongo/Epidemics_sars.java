@@ -1,0 +1,30 @@
+package com.aston.models.mongo;
+
+import java.time.LocalDate;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Document
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Epidemics_sars{
+	
+	@Id private String id;
+	
+	private String country;
+	
+	private LocalDate date;
+	
+	private int year;
+	private int week;
+	
+	private int deaths;
+	private int cumulative_number_of_cases;
+	private int recovered;
+}
