@@ -1,0 +1,11 @@
+spring:
+  elasticsearch:
+    rest:
+      password: changeme
+      username: elastic
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: epidemics
