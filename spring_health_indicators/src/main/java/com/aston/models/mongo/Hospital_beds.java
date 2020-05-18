@@ -15,19 +15,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Sanitation{
+public class Hospital_beds{
 	
 	@Id private String id;
 	
-	private String GHO_code;
-	private String sanitation_hygiene;
 	private String year;
 	private String region_code;
 	private String region;
 	private String country_code;
 	private String country;
-	private String residence_area_type_code;
-	private String residence_area_type;
 	
     private int nb;
     

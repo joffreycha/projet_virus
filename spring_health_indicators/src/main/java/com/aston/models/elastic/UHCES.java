@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import com.aston.models.mongo.UHC;
+import com.aston.models.mongo.Universal_health_coverage;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,7 +31,7 @@ public class UHCES{
     
     private String comments;
 
-	public UHCES(UHC inf) {
+	public UHCES(Universal_health_coverage inf) {
 		this.id = inf.getId();
 		this.GHO_code = inf.getGHO_code();
 		this.UHC = inf .getUHC();

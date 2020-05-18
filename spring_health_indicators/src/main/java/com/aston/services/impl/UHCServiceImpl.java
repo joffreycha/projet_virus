@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.aston.exceptions.NotFoundException;
 import com.aston.models.elastic.UHCES;
-import com.aston.models.mongo.UHC;
+import com.aston.models.mongo.Universal_health_coverage;
 import com.aston.repositories.elastic.UHCESRepository;
 import com.aston.repositories.mongo.UHCMongoRepository;
 import com.aston.services.UHCService;
@@ -22,12 +22,12 @@ public class UHCServiceImpl implements UHCService {
 	@Autowired UHCESRepository uhcESRepository;
 
 	@Override
-	public List<UHC> findAll() {
-		List<UHC> liste = this.uhcRepository.findAll();
+	public List<Universal_health_coverage> findAll() {
+		List<Universal_health_coverage> liste = this.uhcRepository.findAll();
 		
 		List<UHCES> listeES = new ArrayList<>();
 		int cpt = 1;
-		for(UHC i : liste)
+		for(Universal_health_coverage i : liste)
 		{
 			
 			UHCES infES = new UHCES(i);
@@ -45,10 +45,10 @@ public class UHCServiceImpl implements UHCService {
 	}
 	
 	@Override
-	public UHC findById(String id) {
-		Optional<UHC> inf  = this.uhcRepository.findById(id);
+	public Universal_health_coverage findById(String id) {
+		Optional<Universal_health_coverage> inf  = this.uhcRepository.findById(id);
 		if (!inf.isPresent())
-			throw new NotFoundException(id, UHC.class.getSimpleName());
+			throw new NotFoundException(id, Universal_health_coverage.class.getSimpleName());
 		
 		return inf.get();
 	}

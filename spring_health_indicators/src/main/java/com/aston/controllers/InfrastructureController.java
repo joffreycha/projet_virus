@@ -11,23 +11,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aston.models.mongo.Infrastructure;
 import com.aston.models.mongo.Universal_health_coverage;
+import com.aston.services.InfrastructureService;
 import com.aston.services.UHCService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("assurances")
-public class UHCController {
+@RequestMapping("infrastructures")
+public class InfrastructureController {
 
-	@Autowired UHCService uhcService;
+	@Autowired InfrastructureService infrastructureService;
 	
 	@GetMapping("")
-	public List<Universal_health_coverage> findAll() {
-		return this.uhcService.findAll();
+	public List<Infrastructure> findAll() {
+		return this.infrastructureService.findAll();
 	}
 	
 	@GetMapping("{id}")
-	public Universal_health_coverage findById(@PathVariable String id) {
-		return this.uhcService.findById(id);
+	public Infrastructure findById(@PathVariable String id) {
+		return this.infrastructureService.findById(id);
 	}
 }

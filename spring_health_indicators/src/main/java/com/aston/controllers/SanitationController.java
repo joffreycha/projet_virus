@@ -11,23 +11,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aston.models.mongo.Infrastructure;
+import com.aston.models.mongo.Sanitation_hygiene;
 import com.aston.models.mongo.Universal_health_coverage;
+import com.aston.services.InfrastructureService;
+import com.aston.services.SanitationService;
 import com.aston.services.UHCService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("assurances")
-public class UHCController {
+@RequestMapping("sanitations")
+public class SanitationController {
 
-	@Autowired UHCService uhcService;
+	@Autowired SanitationService sanitationService;
 	
 	@GetMapping("")
-	public List<Universal_health_coverage> findAll() {
-		return this.uhcService.findAll();
+	public List<Sanitation_hygiene> findAll() {
+		return this.sanitationService.findAll();
 	}
 	
 	@GetMapping("{id}")
-	public Universal_health_coverage findById(@PathVariable String id) {
-		return this.uhcService.findById(id);
+	public Sanitation_hygiene findById(@PathVariable String id) {
+		return this.sanitationService.findById(id);
 	}
 }

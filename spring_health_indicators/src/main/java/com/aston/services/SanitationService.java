@@ -2,23 +2,24 @@ package com.aston.services;
 
 import java.util.List;
 
+import com.aston.models.mongo.Sanitation_hygiene;
 import com.aston.models.mongo.Universal_health_coverage;
 
 
-public interface UHCService {
+public interface SanitationService {
 
 	/**
 	 * Récupère tous les enregistrements de Mongo
 	 * @return liste d'InfluenzaMongo
 	 */
-	public List<Universal_health_coverage> findAll();
+	public List<Sanitation_hygiene> findAll();
 	
 	/**
 	 * Récupère un enregistrement de Mongo à partir de son id
 	 * @param id l'id à rechercher
 	 * @return l'enregistrement trouvé
 	 */
-	public Universal_health_coverage findById(String id);
+	public Sanitation_hygiene findById(String id);
 
 	
 }

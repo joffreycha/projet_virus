@@ -15,19 +15,20 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class IndicatorHealthPrepa{
+public class Current_health_expenditure{
 	
 	@Id private String id;
 	
 	private String GHO_code;
-	private String version;
+	private String current_health_expenditure;
 	private String year;
 	private String region_code;
 	private String region;
+	private String world_bank_income_group;
 	private String country_code;
 	private String country;
 	
-    private String nb;
+    private float nb;
     
     private String comments;
 }

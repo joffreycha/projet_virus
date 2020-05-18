@@ -11,23 +11,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aston.models.mongo.Hospital_beds;
+import com.aston.models.mongo.Infrastructure;
 import com.aston.models.mongo.Universal_health_coverage;
+import com.aston.services.HospitalBedsService;
+import com.aston.services.InfrastructureService;
 import com.aston.services.UHCService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("assurances")
-public class UHCController {
+@RequestMapping("beds")
+public class HospitalBedsController {
 
-	@Autowired UHCService uhcService;
+	@Autowired HospitalBedsService bedsService;
 	
 	@GetMapping("")
-	public List<Universal_health_coverage> findAll() {
-		return this.uhcService.findAll();
+	public List<Hospital_beds> findAll() {
+		return this.bedsService.findAll();
 	}
 	
 	@GetMapping("{id}")
-	public Universal_health_coverage findById(@PathVariable String id) {
-		return this.uhcService.findById(id);
+	public Hospital_beds findById(@PathVariable String id) {
+		return this.bedsService.findById(id);
 	}
 }

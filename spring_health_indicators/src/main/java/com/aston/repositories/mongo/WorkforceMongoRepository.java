@@ -2,7 +2,7 @@ package com.aston.repositories.mongo;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.aston.models.mongo.UHC;
+import com.aston.models.mongo.Universal_health_coverage;
 import com.aston.models.mongo.Workforce;
 
 

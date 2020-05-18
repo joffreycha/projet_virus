@@ -5,9 +5,9 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import com.aston.models.mongo.CurrentHealthExpenditure;
-import com.aston.models.mongo.IndicatorHealthPrepa;
-import com.aston.models.mongo.UHC;
+import com.aston.models.mongo.Current_health_expenditure;
+import com.aston.models.mongo.Indicator_health_preparation;
+import com.aston.models.mongo.Universal_health_coverage;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,7 +31,7 @@ public class IndicatorHealthPrepaES{
     
     private String comments;
 
-	public IndicatorHealthPrepaES(IndicatorHealthPrepa inf) {
+	public IndicatorHealthPrepaES(Indicator_health_preparation inf) {
 		this.id = inf.getId();
 		this.GHO_code = inf.getGHO_code();
 		this.version = inf .getVersion();

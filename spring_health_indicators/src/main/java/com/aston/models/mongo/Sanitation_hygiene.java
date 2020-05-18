@@ -15,12 +15,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UHC{
+public class Sanitation_hygiene{
 	
 	@Id private String id;
 	
 	private String GHO_code;
-	private String UHC;
+	private String sanitation_hygiene;
 	private String year;
 	private String region_code;
 	private String region;
@@ -29,7 +29,7 @@ public class UHC{
 	private String residence_area_type_code;
 	private String residence_area_type;
 	
-    private float nb;
+    private int nb;
     
     private String comments;
 }

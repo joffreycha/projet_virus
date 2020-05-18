@@ -5,9 +5,9 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import com.aston.models.mongo.CurrentHealthExpenditure;
-import com.aston.models.mongo.Sanitation;
-import com.aston.models.mongo.UHC;
+import com.aston.models.mongo.Current_health_expenditure;
+import com.aston.models.mongo.Sanitation_hygiene;
+import com.aston.models.mongo.Universal_health_coverage;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,7 +33,7 @@ public class SanitationES{
     
     private String comments;
 
-	public SanitationES(Sanitation inf) {
+	public SanitationES(Sanitation_hygiene inf) {
 		this.id = inf.getId();
 		this.GHO_code = inf.getGHO_code();
 		this.sanitation_hygiene = inf .getSanitation_hygiene();

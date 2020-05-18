@@ -5,8 +5,8 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import com.aston.models.mongo.CurrentHealthExpenditure;
-import com.aston.models.mongo.UHC;
+import com.aston.models.mongo.Current_health_expenditure;
+import com.aston.models.mongo.Universal_health_coverage;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,7 +31,7 @@ public class CurrentHealthExpenditureES{
     
     private String comments;
 
-	public CurrentHealthExpenditureES(CurrentHealthExpenditure inf) {
+	public CurrentHealthExpenditureES(Current_health_expenditure inf) {
 		this.id = inf.getId();
 		this.GHO_code = inf.getGHO_code();
 		this.current_health_expenditure = inf .getCurrent_health_expenditure();

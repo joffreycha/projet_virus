@@ -11,23 +11,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aston.models.mongo.Infrastructure;
 import com.aston.models.mongo.Universal_health_coverage;
+import com.aston.models.mongo.Workforce;
+import com.aston.services.InfrastructureService;
 import com.aston.services.UHCService;
+import com.aston.services.WorkforceService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("assurances")
-public class UHCController {
+@RequestMapping("workforces")
+public class WorkforceController {
 
-	@Autowired UHCService uhcService;
+	@Autowired WorkforceService workforceService;
 	
 	@GetMapping("")
-	public List<Universal_health_coverage> findAll() {
-		return this.uhcService.findAll();
+	public List<Workforce> findAll() {
+		return this.workforceService.findAll();
 	}
 	
 	@GetMapping("{id}")
-	public Universal_health_coverage findById(@PathVariable String id) {
-		return this.uhcService.findById(id);
+	public Workforce findById(@PathVariable String id) {
+		return this.workforceService.findById(id);
 	}
 }

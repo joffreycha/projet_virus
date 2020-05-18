@@ -5,8 +5,8 @@ import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import com.aston.models.mongo.CurrentHealthExpenditure;
-import com.aston.models.mongo.UHC;
+import com.aston.models.mongo.Current_health_expenditure;
+import com.aston.models.mongo.Universal_health_coverage;
 import com.aston.models.mongo.Workforce;
 
 import lombok.Data;
