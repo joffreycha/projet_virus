@@ -38,10 +38,6 @@ def generate_data(nom_fichier):
                     "cases": cases,
                     "deaths": int(deaths),
                     "update_time": datetime.strptime(update_time, "%m/%d/%Y %H:%M")
-<<<<<<< HEAD
-
-=======
->>>>>>> ddc83fe64e53661a2e87a0e61b2fcdc0d4e4052e
             }
         
 mydb = client["epidemics"]
