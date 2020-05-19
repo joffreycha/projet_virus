@@ -10,7 +10,7 @@ import com.aston.models.mongo.Epidemics_influenza;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "influenza")
+@Document(indexName = "epidemics_influenza")
 @Data
 @NoArgsConstructor
 public class InfluenzaES{
