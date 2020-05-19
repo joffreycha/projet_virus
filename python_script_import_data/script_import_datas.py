@@ -1,5 +1,6 @@
 import import_depenses
-import import_h1n1
+#import import_h1n1
+import import_h1n1_days
 import import_hospital_beds
 import import_indicator_health_prepa
 import import_influenza
