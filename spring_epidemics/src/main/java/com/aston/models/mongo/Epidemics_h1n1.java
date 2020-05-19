@@ -22,5 +22,7 @@ public class Epidemics_h1n1{
 	private LocalDate date;
 	
     private int cases;
+    private int cumul_cases;
     private int deaths;
+    private int cumul_deaths;
 }

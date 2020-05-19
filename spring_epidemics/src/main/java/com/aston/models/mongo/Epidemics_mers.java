@@ -23,4 +23,6 @@ public class Epidemics_mers{
 	private int week;
 	
     private int cases;
+    private int cumul_cases;
+    
 }

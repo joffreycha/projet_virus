@@ -22,14 +22,18 @@ public class H1n1ES{
 	private LocalDate date;
 	
     private int cases;
+    private int cumul_cases;
     private int deaths;
+    private int cumul_deaths;
 
-	public H1n1ES(Epidemics_h1n1 inf) {
-		this.id = inf.getId();
-		this.country = inf.getCountry();
-		this.date = inf .getDate();
-		this.cases = inf.getCases();
-		this.deaths = inf.getDeaths();
+	public H1n1ES(Epidemics_h1n1 h) {
+		this.id = h.getId();
+		this.country = h.getCountry();
+		this.date = h.getDate();
+		this.cases = h.getCases();
+		this.cumul_cases = h.getCumul_cases();
+		this.deaths = h.getDeaths();
+		this.cumul_deaths = h.getCumul_deaths();
 	}
     
     

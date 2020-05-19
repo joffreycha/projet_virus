@@ -22,6 +22,8 @@ public class SarsES{
 	private LocalDate date;
 	
 	private int deaths;
+	private int cumul_deaths;
+	private int cases;
 	private int cumul_cases;
 
 	public SarsES(Epidemics_sars s) {
@@ -29,6 +31,8 @@ public class SarsES{
 		this.country = s.getCountry();
 		this.date = s .getDate();
 		this.deaths = s.getDeaths();
+		this.cumul_deaths = s.getCumul_deaths();
+		this.cases = s.getCases();
 		this.cumul_cases = s.getCumul_cases();
 	}
     

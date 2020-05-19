@@ -22,5 +22,7 @@ public class Epidemics_sars{
 	private LocalDate date;
 	
 	private int deaths;
+	private int cumul_deaths;
+	private int cases;
 	private int cumul_cases;
 }

@@ -23,13 +23,15 @@ public class MersES{
 	private int week;
 	
     private int cases;
+    private int cumul_cases;
 
-	public MersES(Epidemics_mers inf) {
-		this.id = inf.getId();
-		this.country = inf.getCountry();
-		this.year = inf.getYear();
-		this.week = inf.getWeek();
-		this.cases = inf.getCases();
+	public MersES(Epidemics_mers m) {
+		this.id = m.getId();
+		this.country = m.getCountry();
+		this.year = m.getYear();
+		this.week = m.getWeek();
+		this.cases = m.getCases();
+		this.cumul_cases = m.getCumul_cases();
 	}
     
     
