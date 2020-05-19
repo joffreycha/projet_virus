@@ -17,13 +17,10 @@ public class Epidemics_mers{
 	
 	@Id private String id;
 	
-	private String region;	
+	private String country;	
 	
 	private int year;
 	private int week;
 	
-	private LocalDate week_start_date;
-	private LocalDate week_end_date;
-	
-    private int new_cases;
+    private int cases;
 }

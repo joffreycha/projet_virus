@@ -17,24 +17,19 @@ public class MersES{
 
 	@Id private String id;
 	
-	private String region;	
+	private String country;	
 	
 	private int year;
 	private int week;
 	
-	private LocalDate week_start_date;
-	private LocalDate week_end_date;
-	
-    private int new_cases;
+    private int cases;
 
 	public MersES(Epidemics_mers inf) {
 		this.id = inf.getId();
-		this.region = inf.getRegion();
+		this.country = inf.getCountry();
 		this.year = inf.getYear();
 		this.week = inf.getWeek();
-		this.week_start_date = inf.getWeek_start_date();
-		this.week_end_date = inf.getWeek_end_date();
-		this.new_cases = inf.getNew_cases();
+		this.cases = inf.getCases();
 	}
     
     
