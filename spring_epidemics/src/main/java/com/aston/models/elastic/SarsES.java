@@ -21,23 +21,15 @@ public class SarsES{
 	
 	private LocalDate date;
 	
-	private int year;
-	private int week;
-	
 	private int deaths;
-	private int cumulative_number_of_cases;
-	private int recovered;
+	private int cumul_cases;
 
-	public SarsES(Epidemics_sars inf) {
-		this.id = inf.getId();
-		this.country = inf.getCountry();
-		this.date = inf .getDate();
-		this.year = inf.getYear();
-		this.week = inf.getWeek();
-		this.deaths = inf.getDeaths();
-		this.cumulative_number_of_cases = inf.getCumulative_number_of_cases();
-		this.recovered = inf.getRecovered();
-		this.country = inf.getCountry();
+	public SarsES(Epidemics_sars s) {
+		this.id = s.getId();
+		this.country = s.getCountry();
+		this.date = s .getDate();
+		this.deaths = s.getDeaths();
+		this.cumul_cases = s.getCumul_cases();
 	}
     
     

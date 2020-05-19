@@ -1,6 +1,7 @@
 package com.aston.services;
 
 import java.util.List;
+
 import com.aston.models.mongo.Epidemics_sars;
 
 
@@ -8,7 +9,7 @@ public interface SarsService {
 
 	/**
 	 * Récupère tous les enregistrements de Mongo
-	 * @return liste d'InfluenzaMongo
+	 * @return liste d'Epidemics_sars
 	 */
 	public List<Epidemics_sars> findAll();
 	

@@ -14,6 +14,6 @@ public class TestController {
 
 	@GetMapping("")
 	public String get() {
-		return "test du GET " + LocalDate.now();
+		return "test du GET health " + LocalDate.now();
 	}
 }

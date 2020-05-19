@@ -21,10 +21,6 @@ public class Epidemics_sars{
 	
 	private LocalDate date;
 	
-	private int year;
-	private int week;
-	
 	private int deaths;
-	private int cumulative_number_of_cases;
-	private int recovered;
+	private int cumul_cases;
 }
