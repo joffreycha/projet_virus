@@ -19,10 +19,7 @@ public class H1n1ES{
 	
 	private String country;
 	
-	private LocalDate update_time;
-	
-	private int year;
-	private int week;
+	private LocalDate date;
 	
     private int cases;
     private int deaths;
@@ -30,9 +27,7 @@ public class H1n1ES{
 	public H1n1ES(Epidemics_h1n1 inf) {
 		this.id = inf.getId();
 		this.country = inf.getCountry();
-		this.update_time = inf .getUpdate_time();
-		this.year = inf.getYear();
-		this.week = inf.getWeek();
+		this.date = inf .getDate();
 		this.cases = inf.getCases();
 		this.deaths = inf.getDeaths();
 	}

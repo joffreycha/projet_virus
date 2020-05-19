@@ -19,10 +19,7 @@ public class Epidemics_h1n1{
 	
 	private String country;
 	
-	private LocalDate update_time;
-	
-	private int year;
-	private int week;
+	private LocalDate date;
 	
     private int cases;
     private int deaths;
