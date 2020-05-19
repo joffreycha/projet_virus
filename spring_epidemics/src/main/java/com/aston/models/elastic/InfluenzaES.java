@@ -19,11 +19,7 @@ public class InfluenzaES{
 	
 	private String country;
 	
-	private int year;
-	private int week;
-	
-	private LocalDate week_start_date;
-	private LocalDate week_end_date;
+	private LocalDate date;
 	
 	private int AH1;
 	private int AH1N12009;
@@ -41,10 +37,7 @@ public class InfluenzaES{
 	public InfluenzaES(Epidemics_influenza inf) {
 		this.id = inf.getId();
 		this.country = inf.getCountry();
-		this.year = inf.getYear();
-		this.week = inf.getWeek();
-		this.week_start_date = inf .getWeek_start_date();
-		this.week_end_date = inf .getWeek_end_date();
+		this.date = inf .getDate();
 		this.AH1 = inf.getAH1();
 		this.AH1N12009 = inf.getAH1N12009();
 		this.AH3 = inf.getAH3();

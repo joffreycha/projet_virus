@@ -18,12 +18,8 @@ public class Epidemics_influenza{
 	@Id private String id;
 	
 	private String country;
-	
-	private int year;
-	private int week;
-	
-	private LocalDate week_start_date;
-	private LocalDate week_end_date;
+
+	private LocalDate date;
 	
 	private int AH1;
 	private int  AH1N12009;
