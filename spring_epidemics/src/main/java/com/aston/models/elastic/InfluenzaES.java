@@ -22,6 +22,7 @@ public class InfluenzaES{
 	private LocalDate date;
 	
 	private String type;
+	private String souche;
 	
 	private int cases;
 	private int cumul_cases;
@@ -31,6 +32,7 @@ public class InfluenzaES{
 		this.country = inf.getCountry();
 		this.date = inf .getDate();
 		this.type = inf.getType();
+		this.souche = inf.getSouche();
 		this.cases = inf.getCases();
 		this.cumul_cases = inf.getCumul_cases();
 	}

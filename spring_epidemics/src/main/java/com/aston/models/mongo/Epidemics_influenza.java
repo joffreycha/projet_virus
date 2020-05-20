@@ -22,6 +22,7 @@ public class Epidemics_influenza{
 	private LocalDate date;
 	
 	private String type;
+	private String souche;
 	
 	private int  cases;
 	private int cumul_cases;
