@@ -21,17 +21,10 @@ public class Epidemics_influenza{
 
 	private LocalDate date;
 	
-	private int AH1;
-	private int  AH1N12009;
-	private int AH3;
-	private int AH5;
-	private int ANOTSUBTYPED;
-	private int INF_A;
-	private int BYAMAGATA;
-	private int BVICTORIA;
-	private int BNOTDETERMINED;
-	private int INF_B;
-	private int ALL_INF;
-	private int ALL_INF2;
+	private String type;
+	
+	private int  cases;
+	private int cumul_cases;
+
 	
 }
