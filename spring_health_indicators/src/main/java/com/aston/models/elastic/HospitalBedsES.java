@@ -23,7 +23,7 @@ public class HospitalBedsES{
 	private String country_code;
 	private String country;
 	
-    private int nb;
+    private int nb_hospital_beds;
     
     private String comments;
 
@@ -34,7 +34,7 @@ public class HospitalBedsES{
 		this.region = inf.getRegion();
 		this.country_code = inf.getCountry_code();
 		this.country = inf.getCountry();
-		this.nb = inf.getNb();
+		this.nb_hospital_beds = inf.getNb_hospital_beds();
 		this.comments = inf.getComments();
 	}
     

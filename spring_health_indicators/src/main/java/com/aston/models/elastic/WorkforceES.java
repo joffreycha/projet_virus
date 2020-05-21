@@ -27,7 +27,7 @@ public class WorkforceES{
 	private String country_code;
 	private String country;
 	
-    private float nb;
+    private float nb_workforce;
     
     private String comments;
 
@@ -40,7 +40,7 @@ public class WorkforceES{
 		this.region = inf.getRegion();
 		this.country_code = inf.getCountry_code();
 		this.country = inf.getCountry();
-		this.nb = inf.getNb();
+		this.nb_workforce = inf.getNb_workforce();
 		this.comments = inf.getComments();
 	}
     

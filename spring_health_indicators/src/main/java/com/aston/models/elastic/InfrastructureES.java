@@ -25,7 +25,7 @@ public class InfrastructureES{
 	private String country_code;
 	private String country;
 	
-    private float nb;
+    private float nb_infrastructure;
     
     private String comments;
 
@@ -38,7 +38,7 @@ public class InfrastructureES{
 		this.region = inf.getRegion();
 		this.country_code = inf.getCountry_code();
 		this.country = inf.getCountry();
-		this.nb = inf.getNb();
+		this.nb_infrastructure = inf.getNb_infrastructure();
 		this.comments = inf.getComments();
 	}
     

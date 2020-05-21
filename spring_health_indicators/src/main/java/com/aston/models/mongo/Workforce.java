@@ -27,7 +27,7 @@ public class Workforce{
 	private String country_code;
 	private String country;
 	
-    private float nb;
+    private float nb_workforce;
     
     private String comments;
 }

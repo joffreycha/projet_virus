@@ -27,7 +27,7 @@ public class UHCES{
 	private String residence_area_type_code;
 	private String residence_area_type;
 	
-    private float nb;
+    private float indice_universal_health_coverage;
     
     private String comments;
 
@@ -42,7 +42,7 @@ public class UHCES{
 		this.country = inf.getCountry();
 		this.residence_area_type_code = inf.getResidence_area_type_code();
 		this.residence_area_type = inf.getResidence_area_type();
-		this.nb = inf.getNb();
+		this.indice_universal_health_coverage = inf.getIndice_universal_health_coverage();
 		this.comments = inf.getComments();
 	}
     

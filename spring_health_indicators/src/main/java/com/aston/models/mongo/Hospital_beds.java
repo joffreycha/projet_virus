@@ -25,7 +25,7 @@ public class Hospital_beds{
 	private String country_code;
 	private String country;
 	
-    private int nb;
+    private int nb_hospital_beds;
     
     private String comments;
 }

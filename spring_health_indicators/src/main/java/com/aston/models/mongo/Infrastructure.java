@@ -25,7 +25,7 @@ public class Infrastructure{
 	private String country_code;
 	private String country;
 	
-    private float nb;
+    private float nb_infrastructure;
     
     private String comments;
 }

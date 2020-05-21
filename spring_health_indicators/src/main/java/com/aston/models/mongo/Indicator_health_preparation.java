@@ -27,7 +27,7 @@ public class Indicator_health_preparation{
 	private String country_code;
 	private String country;
 	
-    private String nb;
+    private String indice_health_prepa;
     
     private String comments;
 }
