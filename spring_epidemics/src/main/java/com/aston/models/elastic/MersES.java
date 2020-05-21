@@ -10,7 +10,7 @@ import com.aston.models.mongo.Epidemics_mers;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "epidemics_mers")
+@Document(indexName = "project_epidemics_mers")
 @Data
 @NoArgsConstructor
 public class MersES{

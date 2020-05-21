@@ -10,7 +10,7 @@ import com.aston.models.mongo.Hospital_beds;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "epidemics_health_indicators_hospital_beds")
+@Document(indexName = "project_health_indicators_hospital_beds")
 @Data
 @NoArgsConstructor
 public class HospitalBedsES{

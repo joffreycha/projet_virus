@@ -12,7 +12,7 @@ import com.aston.models.mongo.Workforce;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "epidemics_health_indicators_workforce")
+@Document(indexName = "project_health_indicators_workforce")
 @Data
 @NoArgsConstructor
 public class WorkforceES{

@@ -12,7 +12,7 @@ import com.aston.models.mongo.Universal_health_coverage;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "epidemics_health_indicators_sanitation_hygiene")
+@Document(indexName = "project_health_indicators_sanitation_hygiene")
 @Data
 @NoArgsConstructor
 public class SanitationES{

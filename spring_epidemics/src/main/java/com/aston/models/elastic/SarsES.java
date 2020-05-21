@@ -10,7 +10,7 @@ import com.aston.models.mongo.Epidemics_sars;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "epidemics_sars")
+@Document(indexName = "project_epidemics_sars")
 @Data
 @NoArgsConstructor
 public class SarsES{

@@ -10,7 +10,7 @@ import com.aston.models.mongo.Epidemics_h1n1;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "epidemics_h1n1")
+@Document(indexName = "project_epidemics_h1n1")
 @Data
 @NoArgsConstructor
 public class H1n1ES{

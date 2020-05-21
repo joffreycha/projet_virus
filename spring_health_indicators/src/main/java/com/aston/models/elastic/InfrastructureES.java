@@ -10,7 +10,7 @@ import com.aston.models.mongo.Infrastructure;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "epidemics_health_indicators_infrastructure")
+@Document(indexName = "project_health_indicators_infrastructure")
 @Data
 @NoArgsConstructor
 public class InfrastructureES{
