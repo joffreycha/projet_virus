@@ -10,7 +10,7 @@ import com.aston.models.mongo.Universal_health_coverage;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "uhc")
+@Document(indexName = "epidemics_health_indicators_uhc")
 @Data
 @NoArgsConstructor
 public class UHCES{

@@ -11,7 +11,7 @@ import com.aston.models.mongo.Universal_health_coverage;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(indexName = "current_health_expenditure")
+@Document(indexName = "epidemics_health_indicators_current_health_expenditure")
 @Data
 @NoArgsConstructor
 public class CurrentHealthExpenditureES{
