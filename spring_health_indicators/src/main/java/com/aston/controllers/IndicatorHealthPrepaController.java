@@ -20,7 +20,7 @@ import com.aston.services.UHCService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("indicateurs")
+@RequestMapping("indicators")
 public class IndicatorHealthPrepaController {
 
 	@Autowired IndicatorHealthPrepaService indicatorHealthPrepaService;

@@ -1,11 +1,7 @@
 package com.aston.models.mongo;
 
-import java.time.LocalDate;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.aston.models.elastic.UHCES;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,13 +17,13 @@ public class Indicator_health_preparation{
 	
 	private String GHO_code;
 	private String version;
-	private String year;
+	private int year;
 	private String region_code;
 	private String region;
 	private String country_code;
 	private String country;
 	
-    private String indice_health_prepa;
+    private int indice_health_prepa;
     
     private String comments;
 }

@@ -1,12 +1,9 @@
 package com.aston.models.elastic;
 
-import java.time.LocalDate;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import com.aston.models.mongo.Current_health_expenditure;
-import com.aston.models.mongo.Universal_health_coverage;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +17,7 @@ public class CurrentHealthExpenditureES{
 	
 	private String GHO_code;
 	private String current_health_expenditure;
-	private String year;
+	private int year;
 	private String region_code;
 	private String region;
 	private String world_bank_income_group;

@@ -1,11 +1,7 @@
 package com.aston.models.mongo;
 
-import java.time.LocalDate;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.aston.models.elastic.UHCES;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +17,7 @@ public class Current_health_expenditure{
 	
 	private String GHO_code;
 	private String current_health_expenditure;
-	private String year;
+	private int year;
 	private String region_code;
 	private String region;
 	private String world_bank_income_group;

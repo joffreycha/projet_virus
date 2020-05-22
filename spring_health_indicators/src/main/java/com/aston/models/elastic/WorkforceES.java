@@ -1,12 +1,8 @@
 package com.aston.models.elastic;
 
-import java.time.LocalDate;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import com.aston.models.mongo.Current_health_expenditure;
-import com.aston.models.mongo.Universal_health_coverage;
 import com.aston.models.mongo.Workforce;
 
 import lombok.Data;
@@ -21,7 +17,7 @@ public class WorkforceES{
 	
 	private String GHO_code;
 	private String job;
-	private String year;
+	private int year;
 	private String region_code;
 	private String region;
 	private String country_code;

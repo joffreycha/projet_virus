@@ -1,7 +1,5 @@
 package com.aston.models.elastic;
 
-import java.time.LocalDate;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
@@ -17,7 +15,7 @@ public class HospitalBedsES{
 
 	@Id private String id;
 	
-	private String year;
+	private int year;
 	private String region_code;
 	private String region;
 	private String country_code;

@@ -1,7 +1,5 @@
 package com.aston.models.mongo;
 
-import java.time.LocalDate;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -19,7 +17,7 @@ public class Infrastructure{
 	
 	private String GHO_code;
 	private String infrastructure;
-	private String year;
+	private int year;
 	private String region_code;
 	private String region;
 	private String country_code;
