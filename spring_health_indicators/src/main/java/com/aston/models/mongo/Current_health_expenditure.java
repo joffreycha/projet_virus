@@ -24,7 +24,7 @@ public class Current_health_expenditure{
 	private String country_code;
 	private String country;
 	
-    private float indice_current_health_expenditure;
+    private float nb;
     
     private String comments;
 }

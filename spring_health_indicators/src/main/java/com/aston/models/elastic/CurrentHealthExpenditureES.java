@@ -24,7 +24,7 @@ public class CurrentHealthExpenditureES{
 	private String country_code;
 	private String country;
 	
-    private float indice_current_health_expenditure;
+    private float nb;
     
     private String comments;
 
@@ -38,7 +38,7 @@ public class CurrentHealthExpenditureES{
 		this.world_bank_income_group = inf.getWorld_bank_income_group();
 		this.country_code = inf.getCountry_code();
 		this.country = inf.getCountry();
-		this.indice_current_health_expenditure = inf.getIndice_current_health_expenditure();
+		this.nb = inf.getNb();
 		this.comments = inf.getComments();
 	}
     

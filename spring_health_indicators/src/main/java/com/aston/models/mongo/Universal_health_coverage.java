@@ -25,7 +25,7 @@ public class Universal_health_coverage{
 	private String residence_area_type_code;
 	private String residence_area_type;
 	
-    private float indice_universal_health_coverage;
+    private float nb;
     
     private String comments;
 }

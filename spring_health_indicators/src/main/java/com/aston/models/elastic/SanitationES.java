@@ -25,7 +25,7 @@ public class SanitationES{
 	private String residence_area_type_code;
 	private String residence_area_type;
 	
-    private int nb_sanitation_hygiene;
+    private int nb;
     
     private String comments;
 
@@ -40,7 +40,7 @@ public class SanitationES{
 		this.country = inf.getCountry();
 		this.residence_area_type_code = inf.getResidence_area_type_code();
 		this.residence_area_type = inf.getResidence_area_type();
-		this.nb_sanitation_hygiene = inf.getNb_sanitation_hygiene();
+		this.nb = inf.getNb();
 		this.comments = inf.getComments();
 	}
     

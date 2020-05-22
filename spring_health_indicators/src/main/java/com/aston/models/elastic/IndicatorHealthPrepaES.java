@@ -23,7 +23,7 @@ public class IndicatorHealthPrepaES{
 	private String country_code;
 	private String country;
 	
-    private int indice_health_prepa;
+    private int nb;
     
     private String comments;
 
@@ -36,7 +36,7 @@ public class IndicatorHealthPrepaES{
 		this.region = inf.getRegion();
 		this.country_code = inf.getCountry_code();
 		this.country = inf.getCountry();
-		this.indice_health_prepa = inf.getIndice_health_prepa();
+		this.nb = inf.getNb();
 		this.comments = inf.getComments();
 	}
     

@@ -25,7 +25,7 @@ public class Sanitation_hygiene{
 	private String residence_area_type_code;
 	private String residence_area_type;
 	
-    private int nb_sanitation_hygiene;
+    private int nb;
     
     private String comments;
 }
