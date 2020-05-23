@@ -15,7 +15,7 @@ public class SanitationES{
 
 	@Id private String id;
 	
-	private String GHO_code;
+	private String gho_code;
 	private String sanitation_hygiene;
 	private int year;
 	private String region_code;
@@ -31,7 +31,7 @@ public class SanitationES{
 
 	public SanitationES(Sanitation_hygiene inf) {
 		this.id = inf.getId();
-		this.GHO_code = inf.getGHO_code();
+		this.gho_code = inf.getGHO_code();
 		this.sanitation_hygiene = inf .getSanitation_hygiene();
 		this.year = inf.getYear();
 		this.region_code = inf.getRegion_code();

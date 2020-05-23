@@ -15,7 +15,7 @@ public class WorkforceES{
 
 	@Id private String id;
 	
-	private String GHO_code;
+	private String gho_code;
 	private String job;
 	private int year;
 	private String region_code;
@@ -29,7 +29,7 @@ public class WorkforceES{
 
 	public WorkforceES(Workforce inf) {
 		this.id = inf.getId();
-		this.GHO_code = inf.getGHO_code();
+		this.gho_code = inf.getGHO_code();
 		this.job = inf .getJob();
 		this.year = inf.getYear();
 		this.region_code = inf.getRegion_code();

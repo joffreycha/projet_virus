@@ -15,7 +15,7 @@ public class CurrentHealthExpenditureES{
 
 	@Id private String id;
 	
-	private String GHO_code;
+	private String gho_code;
 	private String current_health_expenditure;
 	private int year;
 	private String region_code;
@@ -30,7 +30,7 @@ public class CurrentHealthExpenditureES{
 
 	public CurrentHealthExpenditureES(Current_health_expenditure inf) {
 		this.id = inf.getId();
-		this.GHO_code = inf.getGHO_code();
+		this.gho_code = inf.getGHO_code();
 		this.current_health_expenditure = inf .getCurrent_health_expenditure();
 		this.year = inf.getYear();
 		this.region_code = inf.getRegion_code();

@@ -15,8 +15,8 @@ public class UHCES{
 
 	@Id private String id;
 	
-	private String GHO_code;
-	private String UHC;
+	private String gho_code;
+	private String uhc;
 	private int year;
 	private String region_code;
 	private String region;
@@ -31,8 +31,8 @@ public class UHCES{
 
 	public UHCES(Universal_health_coverage inf) {
 		this.id = inf.getId();
-		this.GHO_code = inf.getGHO_code();
-		this.UHC = inf .getUHC();
+		this.gho_code = inf.getGHO_code();
+		this.uhc = inf .getUHC();
 		this.year = inf.getYear();
 		this.region_code = inf.getRegion_code();
 		this.region = inf.getRegion();
